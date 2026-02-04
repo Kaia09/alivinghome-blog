@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AlivingHome Blog Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <nav class="nav-bar container" aria-label="Primary">
+          <a class="logo" href="#hero">ALIVINGHOME</a>
+          <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Foundation</a>
+            <a href="#" class="nav-link">Skincare</a>
+            <a href="#latest" class="nav-link nav-link--active">Blog</a>
+            <a href="#" class="nav-link">Reviews</a>
+          </div>
+          <button class="nav-cta" type="button">Shop Now</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="hero-kicker">AlivingHome Blog Hub</p>
+              <h1 class="hero-title serif">
+                Designed for<br />
+                Real Living <span class="hero-italic">Comfort</span>
+              </h1>
+              <p class="hero-text">
+                Explore buying guides, home ideas, and real-life tips around recliner chairs,
+                reclining sofas, sectionals, and modern living spaces.
+              </p>
+              <button class="btn btn-primary" type="button">Explore Your Comfort</button>
+            </div>
+            <div class="hero-media">
+              <div class="hero-slider" data-hero-slider>
+                <div class="hero-slides" data-hero-slides>
+                  <div class="hero-slide is-active" data-hero-slide>
+                    <img
+                      src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200"
+                      alt="Modern tan leather reclining sofa"
+                    />
+                  </div>
+                  <div class="hero-slide" data-hero-slide>
+                    <img
+                      src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&q=80&w=1200"
+                      alt="Cream colored designer swivel recliner"
+                    />
+                  </div>
+                  <div class="hero-slide" data-hero-slide>
+                    <img
+                      src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=1200"
+                      alt="Premium modern sectional sofa"
+                    />
+                  </div>
+                </div>
+                <button class="hero-arrow hero-arrow--left" type="button" data-hero-prev aria-label="Previous slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <button class="hero-arrow hero-arrow--right" type="button" data-hero-next aria-label="Next slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </button>
+                <div class="hero-dots" data-hero-dots>
+                  <button class="hero-dot is-active" type="button" data-hero-dot data-index="0" aria-label="Go to slide 1"></button>
+                  <button class="hero-dot" type="button" data-hero-dot data-index="1" aria-label="Go to slide 2"></button>
+                  <button class="hero-dot" type="button" data-hero-dot data-index="2" aria-label="Go to slide 3"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">Popular Categories</h2>
+              <div class="section-actions">
+                <button class="icon-button" type="button" data-carousel-prev aria-label="Scroll categories left">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <button class="icon-button" type="button" data-carousel-next aria-label="Scroll categories right">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="category-carousel" data-category-list></div>
+          </div>
+        </section>
+
+        <section class="section featured">
+          <div class="container">
+            <h2 class="section-title section-title--center">Featured Posts</h2>
+            <div class="featured-grid">
+              <div class="featured-main" data-featured-primary></div>
+              <div class="featured-side">
+                <div class="featured-side-inner" data-featured-side></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section content-section">
+          <div class="container content-grid">
+            <div class="content-main">
+              <div class="category-blocks" data-category-blocks></div>
+            </div>
+            <aside class="sidebar" aria-label="Sidebar">
+              <div class="sidebar-card promo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800"
+                  alt="Modern Haven Collection"
+                />
+                <div class="promo-card__overlay">
+                  <h3 class="promo-card__title serif">Modern Haven Collection</h3>
+                  <p class="promo-card__text">
+                    Transform your living room with our best-selling cloud recliners.
+                  </p>
+                  <button class="btn btn-light" type="button">Shop The Collection</button>
+                </div>
+              </div>
+
+              <div class="sidebar-card">
+                <h3 class="sidebar-title">Recent Posts</h3>
+                <div class="recent-list" data-recent-list></div>
+              </div>
+
+              <div class="sidebar-card newsletter-card">
+                <h3 class="sidebar-title">Join the newsletter</h3>
+                <p class="newsletter-text">
+                  Stay updated with our latest guides and stories for real living comfort.
+                </p>
+                <div class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    class="input"
+                  />
+                  <button class="btn btn-dark" type="button">Subscribe</button>
+                </div>
+              </div>
+
+              <div class="sidebar-card">
+                <h3 class="sidebar-title">Explore Topics</h3>
+                <div class="tag-list" data-tag-list></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section latest-section" id="latest">
+          <div class="container">
+            <div class="latest-header">
+              <div>
+                <h2 class="section-title" data-latest-title>Latest Posts</h2>
+                <p class="filter-label" data-filter-label>Showing all posts</p>
+              </div>
+              <button class="filter-clear is-hidden" type="button" data-filter-clear>
+                Clear filter
+              </button>
+            </div>
+            <div class="latest-grid" data-latest-grid></div>
+            <p class="latest-empty is-hidden" data-latest-empty>No posts match this filter.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">ALIVINGHOME</div>
+            <p class="footer-text">
+              Crafting comfortable modern living spaces with precision engineering and premium materials.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li>About Us</li>
+              <li>Brand Story</li>
+              <li>Sustainability</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-links">
+              <li>Shipping Policy</li>
+              <li>Returns &amp; Exchanges</li>
+              <li>Warranty</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2023 AlivingHome.com. All Rights Reserved. Editorial &amp; Real Living.
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlivingHome Blog Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="container header-inner">
+          <button class="brand" type="button" data-action="home">
+            ALIVINGHOME
+          </button>
+          <nav class="main-nav" aria-label="Primary">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Foundation</a>
+            <a class="nav-link" href="#">Skincare</a>
+            <button class="nav-link nav-button is-active" type="button" data-action="home">
+              Blog
+            </button>
+            <a class="nav-link" href="#">Reviews</a>
+          </nav>
+          <a class="btn btn-primary" href="#">Shop Now</a>
+        </div>
+      </header>
+
+      <section class="hero" data-view="home" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title serif">
+              Designed for
+              <span class="hero-break">Real Living <em>Comfort</em></span>
+            </h1>
+            <p class="hero-text">
+              Explore buying guides, home ideas, and real-life tips around
+              recliner chairs, reclining sofas, sectionals, and modern living
+              spaces.
+            </p>
+            <a class="btn btn-dark" href="#">Explore Your Comfort</a>
+          </div>
+          <div class="hero-media">
+            <div class="hero-slider" data-hero-slider>
+              <div class="hero-slide is-active" data-hero-slide>
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200"
+                  alt="Modern tan leather reclining sofa"
+                />
+              </div>
+              <div class="hero-slide" data-hero-slide>
+                <img
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&q=80&w=1200"
+                  alt="Cream colored designer swivel recliner"
+                />
+              </div>
+              <div class="hero-slide" data-hero-slide>
+                <img
+                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=1200"
+                  alt="Premium modern sectional sofa"
+                />
+              </div>
+            </div>
+            <button class="hero-arrow hero-arrow--left" type="button" data-hero-prev aria-label="Previous slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button class="hero-arrow hero-arrow--right" type="button" data-hero-next aria-label="Next slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+            <div class="hero-dots" data-hero-dots>
+              <button class="hero-dot is-active" type="button" data-hero-dot="0" aria-label="Go to slide 1"></button>
+              <button class="hero-dot" type="button" data-hero-dot="1" aria-label="Go to slide 2"></button>
+              <button class="hero-dot" type="button" data-hero-dot="2" aria-label="Go to slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular-categories" data-view="home" id="categories">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="section-controls">
+              <button class="icon-button" type="button" data-scroll="left" aria-label="Scroll left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button class="icon-button" type="button" data-scroll="right" aria-label="Scroll right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="category-track" data-category-track>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Brand Story">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1513584684374-8bdb7489feef?auto=format&fit=crop&q=80&w=400" alt="Brand Story" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Brand Story</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Buying Guide">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=400" alt="Buying Guide" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Buying Guide</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Decoration Ideas">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" alt="Decoration Ideas" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Decoration Ideas</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Get The Style">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=400" alt="Get The Style" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Get The Style</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Home Improvement">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&q=80&w=400" alt="Home Improvement" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Home Improvement</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Inspiration">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1616489953149-8079777de885?auto=format&fit=crop&q=80&w=400" alt="Inspiration" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Inspiration</span>
+              </span>
+            </button>
+            <button class="category-card" type="button" data-action="filter-category" data-category-name="Top Reviews">
+              <span class="category-card__media">
+                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=400" alt="Top Reviews" />
+                <span class="category-card__overlay"></span>
+                <span class="category-card__label">Top Reviews</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" data-view="home" id="featured">
+        <div class="container">
+          <h2 class="section-title">Featured Posts</h2>
+          <div class="featured-grid">
+            <div class="featured-main" data-featured-main>
+              <article class="post-card post-card--vertical" data-post-id="1" data-category="Buying Guide">
+                <a class="post-card__link" href="#" aria-label="Ultimate Guide to Choosing the Perfect Reclining Sofa">
+                  <div class="post-card__media">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Ultimate Guide to Choosing the Perfect Reclining Sofa" />
+                  </div>
+                  <div class="post-card__content">
+                    <div class="post-card__meta">
+                      <span class="post-card__badge">Buying Guide</span>
+                      <span class="post-card__byline">
+                        <span class="post-card__author">By Kaia</span>
+                        <span class="post-card__separator">•</span>
+                        <span class="post-card__date">Oct 12, 2023</span>
+                      </span>
+                    </div>
+                    <h3 class="post-card__title">Ultimate Guide to Choosing the Perfect Reclining Sofa</h3>
+                    <p class="post-card__excerpt">
+                      Find the ideal balance of comfort and style for your living room with our comprehensive buyer guide.
+                    </p>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <aside class="featured-side">
+              <div class="featured-side__list" data-featured-side>
+                <article class="post-card post-card--small" data-post-id="8" data-category="Buying Guide">
+                  <a class="post-card__link" href="#" aria-label="Small Space Solutions: The Power of Sectional Sofas">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800" alt="Small Space Solutions: The Power of Sectional Sofas" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__overline">Buying Guide • By Kaia</span>
+                      <h3 class="post-card__title">Small Space Solutions: The Power of Sectional Sofas</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--small" data-post-id="10" data-category="Buying Guide">
+                  <a class="post-card__link" href="#" aria-label="Top 10 Recliner Chairs for Lower Back Support">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800" alt="Top 10 Recliner Chairs for Lower Back Support" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__overline">Buying Guide • By Kaia</span>
+                      <h3 class="post-card__title">Top 10 Recliner Chairs for Lower Back Support</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--small" data-post-id="2" data-category="Inspiration">
+                  <a class="post-card__link" href="#" aria-label="5 Minimalist Decor Ideas for Modern Sectionals">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="5 Minimalist Decor Ideas for Modern Sectionals" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__overline">Inspiration • By Kaia</span>
+                      <h3 class="post-card__title">5 Minimalist Decor Ideas for Modern Sectionals</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--small" data-post-id="7" data-category="Inspiration">
+                  <a class="post-card__link" href="#" aria-label="Creating a Cozy Reading Nook with Recliner Chairs">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1544450558-d39d67ba7d33?auto=format&fit=crop&q=80&w=800" alt="Creating a Cozy Reading Nook with Recliner Chairs" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__overline">Inspiration • By Kaia</span>
+                      <h3 class="post-card__title">Creating a Cozy Reading Nook with Recliner Chairs</h3>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <main class="content" data-view="home" id="home-content">
+        <div class="container content-grid">
+          <div class="content-main">
+            <section class="category-block" data-category-block data-category-name="Buying Guide">
+              <div class="category-block__header">
+                <h3 class="category-block__title">Buying Guide</h3>
+                <button class="text-link" type="button" data-action="filter-category" data-category-name="Buying Guide">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="post-grid" data-category-grid>
+                <article class="post-card post-card--horizontal" data-post-id="1" data-category="Buying Guide">
+                  <a class="post-card__link" href="#" aria-label="Ultimate Guide to Choosing the Perfect Reclining Sofa">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Ultimate Guide to Choosing the Perfect Reclining Sofa" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Oct 12, 2023</span>
+                      <h3 class="post-card__title">Ultimate Guide to Choosing the Perfect Reclining Sofa</h3>
+                      <p class="post-card__excerpt">Find the ideal balance of comfort and style for your living room with our comprehensive buyer guide.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="8" data-category="Buying Guide">
+                  <a class="post-card__link" href="#" aria-label="Small Space Solutions: The Power of Sectional Sofas">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800" alt="Small Space Solutions: The Power of Sectional Sofas" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Sep 25, 2023</span>
+                      <h3 class="post-card__title">Small Space Solutions: The Power of Sectional Sofas</h3>
+                      <p class="post-card__excerpt">Think sectionals are only for big rooms? Think again.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="10" data-category="Buying Guide">
+                  <a class="post-card__link" href="#" aria-label="Top 10 Recliner Chairs for Lower Back Support">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800" alt="Top 10 Recliner Chairs for Lower Back Support" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Aug 15, 2023</span>
+                      <h3 class="post-card__title">Top 10 Recliner Chairs for Lower Back Support</h3>
+                      <p class="post-card__excerpt">Our editors ranked the best ergonomic recliners available in 2024.</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+
+            <section class="category-block" data-category-block data-category-name="Inspiration">
+              <div class="category-block__header">
+                <h3 class="category-block__title">Inspiration</h3>
+                <button class="text-link" type="button" data-action="filter-category" data-category-name="Inspiration">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="post-grid" data-category-grid>
+                <article class="post-card post-card--horizontal" data-post-id="2" data-category="Inspiration">
+                  <a class="post-card__link" href="#" aria-label="5 Minimalist Decor Ideas for Modern Sectionals">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="5 Minimalist Decor Ideas for Modern Sectionals" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Oct 10, 2023</span>
+                      <h3 class="post-card__title">5 Minimalist Decor Ideas for Modern Sectionals</h3>
+                      <p class="post-card__excerpt">Transform your space with these simple yet effective decoration tips.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="7" data-category="Inspiration">
+                  <a class="post-card__link" href="#" aria-label="Creating a Cozy Reading Nook with Recliner Chairs">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1544450558-d39d67ba7d33?auto=format&fit=crop&q=80&w=800" alt="Creating a Cozy Reading Nook with Recliner Chairs" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Sep 28, 2023</span>
+                      <h3 class="post-card__title">Creating a Cozy Reading Nook with Recliner Chairs</h3>
+                      <p class="post-card__excerpt">Design the ultimate relaxation spot in your home with these layout ideas.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="9" data-category="Inspiration">
+                  <a class="post-card__link" href="#" aria-label="Autumn Colors: Trending Palettes for Your Living Space">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1523755231516-eb43fd2188ad?auto=format&fit=crop&q=80&w=800" alt="Autumn Colors: Trending Palettes for Your Living Space" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Sep 22, 2023</span>
+                      <h3 class="post-card__title">Autumn Colors: Trending Palettes for Your Living Space</h3>
+                      <p class="post-card__excerpt">Warm up your home this season with our favorite upholstery picks.</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+
+            <section class="category-block" data-category-block data-category-name="Get The Style">
+              <div class="category-block__header">
+                <h3 class="category-block__title">Get The Style</h3>
+                <button class="text-link" type="button" data-action="filter-category" data-category-name="Get The Style">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="post-grid" data-category-grid>
+                <article class="post-card post-card--horizontal" data-post-id="4" data-category="Get The Style">
+                  <a class="post-card__link" href="#" aria-label="The Mid-Century Modern Revamp: Living Room Edition">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=800" alt="The Mid-Century Modern Revamp: Living Room Edition" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Oct 05, 2023</span>
+                      <h3 class="post-card__title">The Mid-Century Modern Revamp: Living Room Edition</h3>
+                      <p class="post-card__excerpt">How to mix classic silhouettes with modern reclining features.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="11" data-category="Get The Style">
+                  <a class="post-card__link" href="#" aria-label="Industrial Loft Vibes: Leather and Steel Pairings">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?auto=format&fit=crop&q=80&w=800" alt="Industrial Loft Vibes: Leather and Steel Pairings" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Jul 20, 2023</span>
+                      <h3 class="post-card__title">Industrial Loft Vibes: Leather and Steel Pairings</h3>
+                      <p class="post-card__excerpt">Get that raw, urban look with our curated selection of leather recliners.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="12" data-category="Get The Style">
+                  <a class="post-card__link" href="#" aria-label="Parisian Chic: Soft Textures and Elegant Frames">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=800" alt="Parisian Chic: Soft Textures and Elegant Frames" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Jun 12, 2023</span>
+                      <h3 class="post-card__title">Parisian Chic: Soft Textures and Elegant Frames</h3>
+                      <p class="post-card__excerpt">Bring a touch of French sophistication to your living room setup.</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+
+            <section class="category-block" data-category-block data-category-name="Home Improvement">
+              <div class="category-block__header">
+                <h3 class="category-block__title">Home Improvement</h3>
+                <button class="text-link" type="button" data-action="filter-category" data-category-name="Home Improvement">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="post-grid" data-category-grid>
+                <article class="post-card post-card--horizontal" data-post-id="5" data-category="Home Improvement">
+                  <a class="post-card__link" href="#" aria-label="Maintenance 101: Keeping Your Leather Sofa Like New">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&q=80&w=800" alt="Maintenance 101: Keeping Your Leather Sofa Like New" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Oct 02, 2023</span>
+                      <h3 class="post-card__title">Maintenance 101: Keeping Your Leather Sofa Like New</h3>
+                      <p class="post-card__excerpt">Pro tips on cleaning and conditioning your leather furniture for longevity.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="13" data-category="Home Improvement">
+                  <a class="post-card__link" href="#" aria-label="How to Properly Position Your Recliner for Ergonomics">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&q=80&w=800" alt="How to Properly Position Your Recliner for Ergonomics" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • May 30, 2023</span>
+                      <h3 class="post-card__title">How to Properly Position Your Recliner for Ergonomics</h3>
+                      <p class="post-card__excerpt">Avoid neck strain with these simple furniture placement rules.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="14" data-category="Home Improvement">
+                  <a class="post-card__link" href="#" aria-label="Fixing Squeaky Mechanisms: A Quick DIY Guide">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&q=80&w=800" alt="Fixing Squeaky Mechanisms: A Quick DIY Guide" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • May 05, 2023</span>
+                      <h3 class="post-card__title">Fixing Squeaky Mechanisms: A Quick DIY Guide</h3>
+                      <p class="post-card__excerpt">Dont let a noisy recliner ruin your peace. Here is how to fix it.</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+
+            <section class="category-block" data-category-block data-category-name="Top Reviews">
+              <div class="category-block__header">
+                <h3 class="category-block__title">Top Reviews</h3>
+                <button class="text-link" type="button" data-action="filter-category" data-category-name="Top Reviews">
+                  View More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="post-grid" data-category-grid>
+                <article class="post-card post-card--horizontal" data-post-id="6" data-category="Top Reviews">
+                  <a class="post-card__link" href="#" aria-label="AlivingHome Cloud Recliner Review: Worth the Hype?">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800" alt="AlivingHome Cloud Recliner Review: Worth the Hype?" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Sep 30, 2023</span>
+                      <h3 class="post-card__title">AlivingHome Cloud Recliner Review: Worth the Hype?</h3>
+                      <p class="post-card__excerpt">An honest breakdown of the comfort, mechanics, and design of our best-seller.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="15" data-category="Top Reviews">
+                  <a class="post-card__link" href="#" aria-label="2024 Sleeper Sofa Comparison: Top 3 Market Leaders">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800" alt="2024 Sleeper Sofa Comparison: Top 3 Market Leaders" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Apr 25, 2023</span>
+                      <h3 class="post-card__title">2024 Sleeper Sofa Comparison: Top 3 Market Leaders</h3>
+                      <p class="post-card__excerpt">We tested the leading sleeper sofas on comfort and mechanism durability.</p>
+                    </div>
+                  </a>
+                </article>
+                <article class="post-card post-card--horizontal" data-post-id="16" data-category="Top Reviews">
+                  <a class="post-card__link" href="#" aria-label="Leather vs Fabric Recliners: The 5-Year Wear Test">
+                    <div class="post-card__media">
+                      <img src="https://images.unsplash.com/photo-1616489953149-8079777de885?auto=format&fit=crop&q=80&w=800" alt="Leather vs Fabric Recliners: The 5-Year Wear Test" />
+                    </div>
+                    <div class="post-card__content">
+                      <span class="post-card__byline">By Kaia • Mar 10, 2023</span>
+                      <h3 class="post-card__title">Leather vs Fabric Recliners: The 5-Year Wear Test</h3>
+                      <p class="post-card__excerpt">See which material stood up best to pets, kids, and daily lounging.</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <aside class="sidebar" aria-label="Sidebar">
+            <div class="sidebar-sticky">
+              <section class="promo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800"
+                  alt="Promotion"
+                  class="promo-card__image"
+                />
+                <div class="promo-card__overlay">
+                  <h5 class="promo-card__title serif">Modern Haven Collection</h5>
+                  <p class="promo-card__text">
+                    Transform your living room with our best-selling cloud recliners.
+                  </p>
+                  <button class="btn btn-light" type="button">Shop The Collection</button>
+                </div>
+              </section>
+
+              <section class="sidebar-card recent-posts">
+                <h4 class="sidebar-title">Recent Posts</h4>
+                <div class="recent-posts__list" data-recent-posts>
+                  <a class="recent-post" href="#" data-post-id="1">
+                    <span class="recent-post__media">
+                      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=200" alt="Ultimate Guide to Choosing the Perfect Reclining Sofa" />
+                    </span>
+                    <span class="recent-post__content">
+                      <span class="recent-post__date">Oct 12, 2023</span>
+                      <span class="recent-post__title">Ultimate Guide to Choosing the Perfect Reclining Sofa</span>
+                    </span>
+                  </a>
+                  <a class="recent-post" href="#" data-post-id="8">
+                    <span class="recent-post__media">
+                      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=200" alt="Small Space Solutions: The Power of Sectional Sofas" />
+                    </span>
+                    <span class="recent-post__content">
+                      <span class="recent-post__date">Sep 25, 2023</span>
+                      <span class="recent-post__title">Small Space Solutions: The Power of Sectional Sofas</span>
+                    </span>
+                  </a>
+                  <a class="recent-post" href="#" data-post-id="10">
+                    <span class="recent-post__media">
+                      <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=200" alt="Top 10 Recliner Chairs for Lower Back Support" />
+                    </span>
+                    <span class="recent-post__content">
+                      <span class="recent-post__date">Aug 15, 2023</span>
+                      <span class="recent-post__title">Top 10 Recliner Chairs for Lower Back Support</span>
+                    </span>
+                  </a>
+                  <a class="recent-post" href="#" data-post-id="2">
+                    <span class="recent-post__media">
+                      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=200" alt="5 Minimalist Decor Ideas for Modern Sectionals" />
+                    </span>
+                    <span class="recent-post__content">
+                      <span class="recent-post__date">Oct 10, 2023</span>
+                      <span class="recent-post__title">5 Minimalist Decor Ideas for Modern Sectionals</span>
+                    </span>
+                  </a>
+                </div>
+              </section>
+
+              <section class="sidebar-card newsletter">
+                <h4 class="sidebar-title">Join the newsletter</h4>
+                <p class="newsletter__text">
+                  Stay updated with our latest guides and stories for real living comfort.
+                </p>
+                <div class="newsletter__form">
+                  <input type="email" placeholder="Your email address" aria-label="Email address" />
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </section>
+
+              <section class="tag-discovery">
+                <h4 class="sidebar-title">Explore Topics</h4>
+                <div class="tag-list" data-tag-list>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Bedroom">#Bedroom</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Coffee Table">#Coffee Table</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Deep Sofa">#Deep Sofa</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Dining Room">#Dining Room</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Dining Table">#Dining Table</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Earth Day">#Earth Day</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Entryway">#Entryway</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Fully Assembled Living">#Fully Assembled Living</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Holiday">#Holiday</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Home Improvement">#Home Improvement</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Home Tips">#Home Tips</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Leather Sofa">#Leather Sofa</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Life Style">#Life Style</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Living Room">#Living Room</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#NYC Design Festival">#NYC Design Festival</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Reclining Sofa">#Reclining Sofa</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Sectional Sofa">#Sectional Sofa</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Sleeper Sofa">#Sleeper Sofa</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Sofa Beds">#Sofa Beds</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#Trending">#Trending</button>
+                  <button class="tag-button" type="button" data-action="filter-tag" data-tag="#TV Stand">#TV Stand</button>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <section class="aggregate is-hidden" data-view="aggregate" id="aggregate-view">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <button class="breadcrumb-link" type="button" data-action="home">Home</button>
+            <span>/</span>
+            <span class="breadcrumb-current" data-aggregate-label>Category</span>
+          </nav>
+          <div class="aggregate-header">
+            <div>
+              <h1 class="aggregate-title" data-aggregate-title>Category</h1>
+              <p class="aggregate-desc" data-aggregate-desc>
+                Exploring the best of this topic. From expert advice to curated collections, discover everything you need for your modern home.
+              </p>
+            </div>
+            <button class="btn btn-light" type="button" data-action="home">Back to Home</button>
+          </div>
+          <div class="aggregate-grid" data-aggregate-grid></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">ALIVINGHOME</div>
+            <p class="footer-text">
+              Crafting comfortable modern living spaces with precision engineering and premium materials.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h6>Company</h6>
+            <ul>
+              <li>About Us</li>
+              <li>Brand Story</li>
+              <li>Sustainability</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h6>Support</h6>
+            <ul>
+              <li>Shipping Policy</li>
+              <li>Returns and Exchanges</li>
+              <li>Warranty</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2023 AlivingHome.com. All Rights Reserved. Editorial and Real Living.
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
