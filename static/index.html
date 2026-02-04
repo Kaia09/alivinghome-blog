@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlivingHome Blog Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <nav class="nav container">
+        <button class="logo-btn" type="button" data-nav-home>
+          ALIVINGHOME
+        </button>
+        <div class="nav-links">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Foundation</a>
+          <a class="nav-link" href="#">Skincare</a>
+          <button class="nav-link nav-link--active" type="button" data-nav-blog>
+            Blog
+          </button>
+          <a class="nav-link" href="#">Reviews</a>
+        </div>
+        <button class="btn btn--dark" type="button">Shop Now</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero home-section" id="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__title serif">
+              Designed for
+              <br />
+              Real Living <span class="hero__title-accent">Comfort</span>
+            </h1>
+            <p class="hero__lead">
+              Explore buying guides, home ideas, and real-life tips around
+              recliner chairs, reclining sofas, sectionals, and modern living
+              spaces.
+            </p>
+            <div class="hero__actions">
+              <button class="btn btn--dark btn--hero" type="button">
+                Explore Your Comfort
+              </button>
+            </div>
+          </div>
+          <div class="hero__media">
+            <div class="hero__frame" data-hero-slider></div>
+            <div class="hero__dots" data-hero-dots></div>
+            <button
+              class="hero__arrow hero__arrow--left"
+              type="button"
+              aria-label="Previous slide"
+              data-hero-prev
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              class="hero__arrow hero__arrow--right"
+              type="button"
+              aria-label="Next slide"
+              data-hero-next
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-nav home-section" id="category-nav">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="section-actions">
+              <button
+                class="icon-btn"
+                type="button"
+                aria-label="Scroll left"
+                data-scroll-left
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="icon-btn"
+                type="button"
+                aria-label="Scroll right"
+                data-scroll-right
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="category-list" data-category-list></div>
+        </div>
+      </section>
+
+      <section class="featured home-section" id="featured">
+        <div class="container">
+          <h2 class="section-title section-title--center">Featured Posts</h2>
+          <div class="featured-grid">
+            <article class="featured-main" id="featured-main"></article>
+            <aside class="featured-side">
+              <div class="featured-side__list" id="featured-side"></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="content home-section" id="home-content">
+        <div class="container content-grid">
+          <div class="content-main">
+            <section class="category-block" data-category-block="Buying Guide">
+              <div class="category-block__header">
+                <h3 class="block-title">Buying Guide</h3>
+                <button
+                  class="link-btn"
+                  type="button"
+                  data-view-more="Buying Guide"
+                >
+                  View More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="category-block__posts" data-category-posts></div>
+            </section>
+
+            <section class="category-block" data-category-block="Inspiration">
+              <div class="category-block__header">
+                <h3 class="block-title">Inspiration</h3>
+                <button
+                  class="link-btn"
+                  type="button"
+                  data-view-more="Inspiration"
+                >
+                  View More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="category-block__posts" data-category-posts></div>
+            </section>
+
+            <section class="category-block" data-category-block="Get The Style">
+              <div class="category-block__header">
+                <h3 class="block-title">Get The Style</h3>
+                <button
+                  class="link-btn"
+                  type="button"
+                  data-view-more="Get The Style"
+                >
+                  View More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="category-block__posts" data-category-posts></div>
+            </section>
+
+            <section
+              class="category-block"
+              data-category-block="Home Improvement"
+            >
+              <div class="category-block__header">
+                <h3 class="block-title">Home Improvement</h3>
+                <button
+                  class="link-btn"
+                  type="button"
+                  data-view-more="Home Improvement"
+                >
+                  View More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="category-block__posts" data-category-posts></div>
+            </section>
+
+            <section class="category-block" data-category-block="Top Reviews">
+              <div class="category-block__header">
+                <h3 class="block-title">Top Reviews</h3>
+                <button
+                  class="link-btn"
+                  type="button"
+                  data-view-more="Top Reviews"
+                >
+                  View More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              <div class="category-block__posts" data-category-posts></div>
+            </section>
+          </div>
+
+          <aside class="sidebar">
+            <div class="sidebar-card promo-card">
+              <img
+                class="promo-card__image"
+                src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800"
+                alt="Modern haven collection"
+              />
+              <div class="promo-card__overlay">
+                <h5 class="promo-card__title serif">
+                  Modern Haven Collection
+                </h5>
+                <p class="promo-card__text">
+                  Transform your living room with our best-selling cloud
+                  recliners.
+                </p>
+                <button class="btn btn--light" type="button">
+                  Shop The Collection
+                </button>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h4 class="sidebar-title">Recent Posts</h4>
+              <div class="recent-list" id="recent-posts"></div>
+            </div>
+
+            <div class="sidebar-card newsletter">
+              <h4 class="sidebar-title">Join the newsletter</h4>
+              <p class="sidebar-text">
+                Stay updated with our latest guides and stories for real living
+                comfort.
+              </p>
+              <div class="newsletter__form">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Your email address"
+                />
+                <button class="btn btn--dark" type="button">Subscribe</button>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h4 class="sidebar-title">Explore Topics</h4>
+              <div class="tag-list" id="tag-list"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="filtered-section" id="filtered-section" hidden>
+        <div class="container">
+          <nav class="breadcrumbs">
+            <button
+              class="breadcrumbs__link"
+              type="button"
+              data-clear-filter
+            >
+              Home
+            </button>
+            <span class="breadcrumbs__sep">/</span>
+            <span class="breadcrumbs__current" id="filter-name">Latest</span>
+          </nav>
+          <div class="filtered-header">
+            <div>
+              <h1 class="filter-title" id="filter-title"></h1>
+              <p class="filter-desc" id="filter-description"></p>
+            </div>
+            <button class="btn btn--outline" type="button" data-clear-filter>
+              Back to Home
+            </button>
+          </div>
+          <div class="filtered-grid" id="filtered-posts"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">ALIVINGHOME</div>
+          <p class="footer-text">
+            Crafting comfortable modern living spaces with precision engineering
+            and premium materials.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h6 class="footer-title">Company</h6>
+          <ul class="footer-list">
+            <li>About Us</li>
+            <li>Brand Story</li>
+            <li>Sustainability</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6 class="footer-title">Support</h6>
+          <ul class="footer-list">
+            <li>Shipping Policy</li>
+            <li>Returns and Exchanges</li>
+            <li>Warranty</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <span>Copyright 2026 AlivingHome.com. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
