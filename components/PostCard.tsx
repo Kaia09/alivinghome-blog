@@ -61,7 +61,7 @@ const PostCard: React.FC<PostCardProps> = ({ post, variant = 'vertical', onAutho
         </div>
         <div>
           <span className="text-xs text-gray-400 mb-1 block">
-            <button onClick={handleAuthorClick} className="hover:text-amber-800 font-medium">{authorDisplay}</button {post.author && post.publishDate && '•'} {post.publishDate}
+            <button onClick={handleAuthorClick} className="hover:text-amber-800 font-medium">{authorDisplay}</button> {post.author && post.publishDate && '•'} {post.publishDate}
           </span>
           <h3 className="text-lg font-semibold leading-snug group-hover:text-amber-800 transition-colors">
             {post.title}
